@@ -1,0 +1,18 @@
+version: '3'
+services:
+  web:
+    image: phpmyadmin:latest
+    networks:
+      - db-admin
+    ports:
+      - "8081:80"
+  redis:
+    image: mariadb:latest
+    networks:
+      - db-admin
+    environment:
+      - MYSQL_ROOT_PASSWORD=test123
+
+networks:
+  db-admin:
+

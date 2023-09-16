@@ -1,0 +1,8 @@
+version: '3'
+services:
+  web:
+    environment:
+      ENVIRONMENT: lab
+  redis:
+    environment:
+      ENVIRONMENT: lab
